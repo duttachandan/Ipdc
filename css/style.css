@@ -1,0 +1,229 @@
+@font-face {
+  font-family: Metropolis-black;
+  src: url("../Assets/font/Metropolis-Black.otf");
+}
+
+@font-face {
+  font-family: Metropolis-Bold;
+  src: url("../Assets/font/Metropolis-Bold.otf");
+}
+
+@font-face {
+  font-family: Metropolis-ExtraBold;
+  src: url("../Assets/font/Metropolis-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: Metropolis-Light;
+  src: url("../Assets/font/Metropolis-Light.otf");
+}
+
+@font-face {
+  font-family: Metropolis-Medium;
+  src: url("../Assets/font/Metropolis-Medium.otf");
+}
+
+@font-face {
+  font-family: Metropolis;
+  src: url("../Assets/font/Metropolis-Regular.otf");
+}
+
+@font-face {
+  font-family: Metropolis-semibold;
+  src: url("../Assets/font/Metropolis-SemiBold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Metropolis, sans-serif;
+}
+
+:root {
+  --primary-color: #ed017f;
+  --secondary-color: #363940;
+  --tertiary-color: #676767;
+}
+
+.container {
+  max-width: 1199px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-50 {
+  padding: 0 15px;
+  width: 50%;
+}
+
+h1,
+.tittle1 {
+  font-size: 63px;
+  font-family: Metropolis-black;
+}
+
+p {
+  font-family: Metropolis-Medium;
+  color: #676767;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.primary-btn {
+  padding: 8px 20px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+}
+
+/* 
+==================
+Header Section
+==================
+*/
+
+header {
+  padding: 15px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: transparent;
+  z-index: 99;
+}
+
+.hdr-wrpr,
+.nav-collapse,
+.nav-btn,
+.nav-collapse > ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-collapse {
+  flex-grow: 2;
+}
+
+.nav-collapse > ul {
+  margin: 0 auto;
+  gap: 41.6px;
+  font-size: 12px;
+}
+
+.nav-btn {
+  gap: 33px;
+  font-size: 12px;
+}
+
+.nav-links {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-toggler {
+  display: none;
+}
+
+/* 
+==============
+Hero Button
+==============
+*/
+
+.hero-section {
+  min-height: 100vh;
+  padding: 90px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-wrpr {
+  position: absolute;
+  z-index: -11;
+  top: 0;
+  right: 0;
+  height: 80%;
+  width: 50%;
+  background: url("../Assets/Big.png") top/cover no-repeat;
+}
+
+.hero-content > h1 {
+  margin-bottom: 23px;
+}
+
+.hero-content > p {
+  margin-bottom: 38px;
+}
+
+.hero-btn > a:first-child {
+  font-family: Metropolis-Light;
+  text-transform: uppercase;
+  margin-right: 20px;
+  padding: 13px 23px;
+  color: white;
+}
+
+.hero-btn > a:last-child {
+  font-family: Metropolis-Light;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 992px) {
+  /* Header Section */
+  .nav-collapse {
+    display: none;
+  }
+  .nav-toggler {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #000;
+    position: relative;
+    margin-left: auto;
+  }
+  .nav-toggler::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 2px;
+  }
+  .nav-toggler::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 2px;
+  }
+
+  /* Hero Section */
+}
