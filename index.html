@@ -4,14 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IPDC</title>
-    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Splide CDN -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Header Section -->
+    <!-- Header sec -->
     <header>
       <div class="container">
         <nav>
@@ -56,15 +62,37 @@
         </nav>
       </div>
     </header>
-
-    <!-- Hero Section -->
+    <!-- Hero sec -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-wrpr"></div>
         <div class="row">
-          <div class="col-50">
+          <div class="col-50 sm-banner-img">
+            <div
+              class="sm-bg"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back"
+              data-aos-delay="500"
+              data-aos-offset="200"
+            >
+              <img src="./Assets/BgForSmall.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-50"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <div class="hero-content">
-              <h1>Chase Your Dream with us</h1>
+              <h1
+                class="title1"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                Chase Your Dream with us
+              </h1>
               <p>
                 The harder you work for something, the greater you’ll feel when
                 you achieve it.
@@ -75,15 +103,160 @@
               </div>
             </div>
           </div>
-          <div class="col-50">
-            
+          <div class="col-50 lg-banner-img">
+            <div class="hero-img">
+              <img
+                src="./Assets/t2PuBsfgkl__1_-removebg-preview (1) 1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cust exp sec -->
+    <section class="cust-exp-sec">
+      <div class="container">
+        <div class="cust-exp-hdr">
+          <h2>Creating Extrordinary Customer Experience</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus et
+            commodi eum praesentium ullam maxime pariatur aliquam quod? Ea,
+            incidunt?
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="exp-crd">
+              <img
+                src="./Assets/exp-icon/Circle Layer.png"
+                alt=""
+                class="exp-img"
+              />
+              <div class="h4 title4">Integrity</div>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
+                quaerat ad animi corporis!
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="exp-crd">
+              <img src="./Assets/exp-icon/Scenery.png" alt="" class="exp-img" />
+              <div class="h4 title4">Demonstrate</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="exp-crd">
+              <img
+                src="./Assets/exp-icon/Object Ungroup.png"
+                alt=""
+                class="exp-img"
+              />
+              <div class="h4 title4">Diversity</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="exp-crd">
+              <img
+                src="/Assets/exp-icon/User Arrows.png"
+                alt=""
+                class="exp-img"
+              />
+              <div class="h4 title4">Teamwork</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="exp-crd">
+              <img
+                src="./Assets/exp-icon/Circle Layer.png"
+                alt=""
+                class="exp-img"
+              />
+              <div class="h4 title4">Collaboration</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="exp-crd">
+              <img src="/Assets/exp-icon/Rocket.png" alt="" class="exp-img" />
+              <div class="h4 title4">Technology</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="exp-crd">
+              <img src="./Assets/exp-icon/Bag.png" alt="" class="exp-img" />
+              <div class="h4 title4">Corporate</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="exp-crd">
+              <img src="./Assets/exp-icon/Cube.png" alt="" class="exp-img" />
+              <div class="h4 title4">Digtal</div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                dicta vel corporis nulla.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Business Partners sec -->
+    <section class="patnr-sec">
+      <div class="container">
+        <div class="hdr-top">
+          <h3 class="title3">Business Partners</h3>
+        </div>
+        <div class="scrl-wrpr">
+          <div class="img-item" style="--i: 1">
+            <img src="./Assets/partners/Frame 1.png" alt="" />
+          </div>
+          <div class="img-item" style="--i: 2">
+            <img src="./Assets/partners/Frame 13.png" alt="" />
+          </div>
+          <div class="img-item" style="--i: 3">
+            <img src="./Assets/partners/Frame 14.png" alt="" />
+          </div>
+          <div class="img-item" style="--i: 4">
+            <img src="./Assets/partners/Frame 15.png" alt="" />
+          </div>
+          <div class="img-item" style="--i: 5">
+            <img src="./Assets/partners/Frame 14.png" alt="" />
           </div>
         </div>
       </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
-
-
