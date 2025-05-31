@@ -69,6 +69,11 @@ body {
   width: 50%;
 }
 
+.col-3 {
+  width: 25%;
+  padding: 0 15px;
+}
+
 h1,
 .title1 {
   font-size: 63px;
@@ -282,6 +287,27 @@ cust-exp-sec
   margin: 0 auto;
 }
 
+.exp-crd {
+  max-width: 259px;
+  padding: 24px;
+}
+
+.exp-crd > img.exp-img {
+  height: 37px;
+  width: 37px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.exp-crd > .title4 {
+  margin-bottom: 10px;
+}
+
+.exp-crd > .title4,
+.exp-crd > p {
+  max-width: 160px;
+}
+
 /* 
 ===============
 Business Partners Section
@@ -329,6 +355,10 @@ Business Partners Section
 }
 
 @media screen and (max-width: 992px) {
+  .title1 {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
   /* Header Section */
   .nav-collapse > ul {
     gap: 20px;
@@ -337,13 +367,28 @@ Business Partners Section
   .hero-btn > .primary-btn {
     margin-bottom: 16px;
   }
-  .hero-content > .title1 {
-    font-size: 40px;
-    margin-bottom: 16px;
-  }
 }
 
 @media screen and (max-width: 768px) {
+  h1,
+  .title1 {
+    font-size: 32px !important;
+    margin-bottom: 16px;
+  }
+  h2,
+  .title2 {
+    font-size: 24px !important;
+  }
+  .col-50 {
+    width: 100% !important;
+  }
+  .col-3 {
+    width: 33.33%;
+  }
+  p {
+    font-size: 14px;
+  }
+
   /* Header Section */
   .nav-collapse {
     display: none;
@@ -376,9 +421,10 @@ Business Partners Section
   }
 
   /* Hero Section */
-
-  .col-50 {
-    width: 100% !important;
+  .hero-section {
+    padding: 90px 0 15px;
+    display: block;
+    min-height: fit-content;
   }
 
   .lg-banner-img,
@@ -388,7 +434,7 @@ Business Partners Section
   .sm-banner-img {
     display: block;
     max-height: 60vh;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   .sm-bg {
     height: 100%;
@@ -398,12 +444,24 @@ Business Partners Section
     height: 100%;
     object-fit: contain;
   }
-  .hero-content > .title1 {
-    font-size: 32px;
+  .hero-content > .hero-content > p {
     margin-bottom: 16px;
   }
-  .hero-content > p {
-    font-size: 14px;
-    margin-bottom: 16px;
+
+  /* Cust Exp Sec */
+}
+
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 12px;
+  }
+  /* Hero Section */
+
+  /* cust exp sec */
+  .col-3 {
+    width: 50%;
+  }
+  .exp-crd {
+    padding: 10px 0;
   }
 }
