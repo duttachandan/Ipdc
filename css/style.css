@@ -354,6 +354,54 @@ Business Partners Section
   object-fit: contain;
 }
 
+/* 
+================
+Our Best Result Section
+================
+*/
+
+.our-bst-result-sec {
+  padding: 106px 0;
+}
+
+.our-bst-result-top {
+  text-align: center;
+}
+
+.our-bst-result-top > h2 {
+  margin-bottom: 20px;
+}
+
+.our-bst-result-top > p {
+  margin-bottom: 84px;
+}
+
+.our-bst-result-sec .row {
+  row-gap: 55px;
+}
+
+.result {
+  max-width: 172px;
+  margin: 0 auto;
+}
+
+.result:hover > .result-num {
+  color: var(--primary-color);
+}
+
+.result-num {
+  font-size: 40px;
+  font-family: Metropolis-Bold;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+}
+
+.result-desc {
+  font-family: Metropolis;
+  text-transform: uppercase;
+  color: var(--tertiary-color);
+}
+
 @media screen and (max-width: 992px) {
   .title1 {
     font-size: 40px;
@@ -448,7 +496,27 @@ Business Partners Section
     margin-bottom: 16px;
   }
 
-  /* Cust Exp Sec */
+  /* Business Partner Section */
+  .hdr-top > h3.title3 {
+    margin: 40px 0;
+  }
+
+  /* Best Result of the Year Section */
+  .our-bst-result-sec {
+    padding: 53px 0;
+  }
+
+  .our-bst-result-sec .row {
+    row-gap: 25px;
+  }
+
+  .result-num {
+    font-size: 28px;
+  }
+
+  .result-desc {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 576px) {
