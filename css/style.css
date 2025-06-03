@@ -43,6 +43,11 @@ body {
   font-family: Metropolis, sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --primary-color: #ed017f;
   --secondary-color: #363940;
@@ -114,6 +119,22 @@ a {
   background: var(--primary-color);
   color: white;
   border-radius: 4px;
+  transform: all 600ms linear;
+}
+
+.primary-btn:hover {
+  background: transparent;
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color) !important;
+}
+
+.transparent-btn:hover {
+  background: var(--primary-color);
+  color: white !important;
+}
+
+.nav-links:hover {
+  color: var(--primary-color) !important;
 }
 
 /* 
@@ -140,6 +161,19 @@ header {
   align-items: center;
 }
 
+.nav-logo {
+  width: 109px;
+}
+
+.nav-logo > a,
+.nav-logo > a > img {
+  width: inherit;
+}
+
+.nav-logo > a > img {
+  object-fit: cover;
+}
+
 .nav-collapse {
   flex-grow: 2;
 }
@@ -164,6 +198,10 @@ header {
   display: none;
 }
 
+.active {
+  display: block !important;
+}
+
 /* 
 ==============
 Hero Button
@@ -171,7 +209,7 @@ Hero Button
 */
 
 .hero-section {
-  min-height: 100vh;
+  min-height: 562px;
   padding: 90px 0;
   display: flex;
   justify-content: center;
@@ -182,11 +220,11 @@ Hero Button
 .hero-wrpr {
   position: absolute;
   z-index: -11;
-  top: 0;
-  right: 0;
-  height: 80%;
-  width: 50%;
-  background: url("../Assets/Big.png") top/cover no-repeat;
+  bottom: 26px;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background: url(../Assets/Big.png) top / cover no-repeat;
 }
 
 .hero-content > h1 {
@@ -205,7 +243,8 @@ Hero Button
   color: white;
 }
 
-.hero-btn > a:last-child {
+.hero-btn > a:last-child,
+.transparent-btn {
   font-family: Metropolis-Light;
   text-transform: uppercase;
   padding: 13px 20px;
@@ -287,10 +326,10 @@ cust-exp-sec
   margin: 0 auto;
 }
 
-.exp-crd {
+/* .exp-crd {
   max-width: 259px;
   padding: 24px;
-}
+} */
 
 .exp-crd > img.exp-img {
   height: 37px;
@@ -308,6 +347,13 @@ cust-exp-sec
   max-width: 160px;
 }
 
+.exp-crd > p {
+  font-family: Metropolis-Medium;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
 /* 
 ===============
 Business Partners Section
@@ -315,13 +361,13 @@ Business Partners Section
 */
 
 .patnr-sec {
-  padding: 15px 0;
+  padding: 40px 0;
   background: rgb(252, 224, 239, 20%);
 }
 
 .hdr-top > h3.title3 {
   text-align: center;
-  margin: 78px 0;
+  margin-bottom: 78px;
 }
 
 .scrl-wrpr {
@@ -402,6 +448,53 @@ Our Best Result Section
   color: var(--tertiary-color);
 }
 
+/* 
+==================
+Footer Section
+==================
+*/
+
+.footer-sec {
+  padding: 60px 0 15px;
+}
+
+.footer-sec .row {
+  row-gap: 20px;
+}
+
+.col-20 {
+  width: 20%;
+  padding: 0 15px;
+}
+
+.col-20 > div:first-child {
+  font-size: 18px;
+  font-family: Metropolis-semibold;
+  margin-bottom: 20px;
+}
+
+.col-20 > ul > li {
+  margin-bottom: 10px;
+}
+
+.col-20 > p {
+  max-width: 180px;
+  font-family: Metropolis-Medium;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-sec a:hover {
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 992px) {
   .title1 {
     font-size: 40px;
@@ -414,6 +507,10 @@ Our Best Result Section
   /* Hero Section */
   .hero-btn > .primary-btn {
     margin-bottom: 16px;
+  }
+  /* Footer Section */
+  .col-20 {
+    width: 50%;
   }
 }
 
@@ -438,9 +535,29 @@ Our Best Result Section
   }
 
   /* Header Section */
+
   .nav-collapse {
     display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 999;
+    padding: 15px 0;
+    text-align: center;
+    transition: all linear 1000ms;
+    transform: translateY(170px);
   }
+
+  .nav-collapse > ul,
+  .nav-btn {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav-btn {
+    margin-top: 20px;
+  }
+
   .nav-toggler {
     display: block;
     height: 2px;
@@ -469,10 +586,15 @@ Our Best Result Section
   }
 
   /* Hero Section */
+
   .hero-section {
     padding: 90px 0 15px;
     display: block;
     min-height: fit-content;
+  }
+
+  .hero-content {
+    text-align: center;
   }
 
   .lg-banner-img,
@@ -486,7 +608,16 @@ Our Best Result Section
   }
   .sm-bg {
     height: 100%;
+    position: relative;
   }
+
+  .sm-bg::after,
+  .sm-bg::before {
+    position: absolute;
+    content: "";
+    top: 0;
+  }
+
   .sm-bg > img {
     width: 100%;
     height: 100%;
@@ -496,10 +627,14 @@ Our Best Result Section
     margin-bottom: 16px;
   }
 
-  /* Business Partner Section */
-  .hdr-top > h3.title3 {
-    margin: 40px 0;
+  .hero-btn > a:first-child {
+    margin-right: 0;
   }
+
+  /* Business Partner Section */
+  /* .hdr-top > h3.title3 {
+    margin: 40px 0;
+  } */
 
   /* Best Result of the Year Section */
   .our-bst-result-sec {
@@ -523,8 +658,6 @@ Our Best Result Section
   p {
     font-size: 12px;
   }
-  /* Hero Section */
-
   /* cust exp sec */
   .col-3 {
     width: 50%;
