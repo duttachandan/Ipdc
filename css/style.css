@@ -389,6 +389,10 @@ Business Partners Section
   /* animation duration * animation-delay * -1 making it - so that it starts from middle of the scroll bar position */
 }
 
+.scrl-wrpr:hover >  .img-item {
+  animation-play-state: paused;
+}
+
 @keyframes scrollX {
   to {
     left: -25%;
@@ -626,7 +630,6 @@ Footer Section
   .hero-content > .hero-content > p {
     margin-bottom: 16px;
   }
-
   .hero-btn > a:first-child {
     margin-right: 0;
   }
