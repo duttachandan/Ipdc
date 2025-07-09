@@ -227,6 +227,10 @@ Hero Button
   background: url(../Assets/Big.png) top / cover no-repeat;
 }
 
+.hero-row {
+  align-items: center;
+}
+
 .hero-content > h1 {
   margin-bottom: 23px;
 }
@@ -389,7 +393,7 @@ Business Partners Section
   /* animation duration * animation-delay * -1 making it - so that it starts from middle of the scroll bar position */
 }
 
-.scrl-wrpr:hover >  .img-item {
+.scrl-wrpr:hover > .img-item {
   animation-play-state: paused;
 }
 
